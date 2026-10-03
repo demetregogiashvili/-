@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ka" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>საქართველო — გმირთა და დიდებული ისტორიის მხარე | ეროვნული მეხსიერება</title>
+    <meta name="description" content="საქართველოს მრავალსაუკუნოვანი ისტორია, დავით აღმაშენებელი, თამარ მეფე, 300 არაგველი, გიორგი ანწუხელიძე და ქართველი გმირების უკვდავი თავდადება.">
+    <meta name="keywords" content="საქართველო, ქართველი გმირები, დავით აღმაშენებელი, თამარ მეფე, 300 არაგველი, გიორგი ანწუხელიძე, დიდგორის ბრძოლა, ისტორიული ქრონოლოგია">
+    <meta name="author" content="საქართველოს ეროვნული მემკვიდრეობა">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="საქართველო — გმირთა და დიდებული ისტორიის მხარე">
+    <meta property="og:description" content="ქართველი ერის უდრეკი სულისკვეთება, ეპოქალური გამარჯვებები და ეროვნული გმირების თავდადება.">
+
+    <!-- Google Fonts: Noto Sans Georgian & Cinzel for regal numerals/titling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Noto+Sans+Georgian:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress-bar" class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Background Ambient Regal Glows -->
+    <div class="glow-orb orb-burgundy" aria-hidden="true"></div>
+    <div class="glow-orb orb-gold" aria-hidden="true"></div>
+    <div class="glow-orb orb-deep" aria-hidden="true"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar-wrapper" id="navbar-header">
+        <nav class="container navbar" id="main-nav" aria-label="მთავარი ნავიგაცია">
+            <a href="#hero" class="brand-logo" id="brand-logo-link" aria-label="საქართველოს გმირები - მთავარი">
+                <span class="logo-shield-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="shield-svg">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <!-- Stylized Bolnisi / Georgian Cross -->
+                        <path d="M12 7v8M8 11h8" stroke-width="2.2" stroke-linecap="round"></path>
+                    </svg>
+                </span>
+                <div class="brand-text-col">
+                    <span class="brand-name">საქართველო</span>
+                    <span class="brand-sub">გმირთა მხარე</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <ul class="nav-links" id="nav-menu-list">
+                <li><a href="#hero" class="nav-link active" id="link-hero">მთავარი</a></li>
+                <li><a href="#heroes" class="nav-link" id="link-heroes">ქართველი გმირები</a></li>
+                <li><a href="#timeline" class="nav-link" id="link-timeline">ქრონოლოგია</a></li>
+                <li><a href="#heritage" class="nav-link" id="link-heritage">მემკვიდრეობა</a></li>
+                <li><a href="#contact" class="nav-link" id="link-contact">ხსოვნის წიგნი</a></li>
+            </ul>
+
+            <!-- Navbar Actions -->
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" aria-label="თემის გადართვა (მუქი / კეთილშობილი)">
+                    <!-- Sun Icon -->
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon -->
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <a href="#heroes" class="btn btn-gold btn-sm desktop-only-btn" id="nav-cta-btn">
+                    <span>გმირების გაცნობა</span>
+                </a>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button type="button" class="mobile-menu-btn" id="mobile-toggle-btn" aria-label="მენიუს გახსნა" aria-expanded="false" aria-controls="mobile-nav-drawer">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="mobile-drawer" id="mobile-nav-drawer" aria-hidden="true">
+            <ul class="mobile-nav-links">
+                <li><a href="#hero" class="mobile-nav-link" id="mob-link-hero">მთავარი</a></li>
+                <li><a href="#heroes" class="mobile-nav-link" id="mob-link-heroes">ქართველი გმირები</a></li>
+                <li><a href="#timeline" class="mobile-nav-link" id="mob-link-timeline">ქრონოლოგია</a></li>
+                <li><a href="#heritage" class="mobile-nav-link" id="mob-link-heritage">მემკვიდრეობა</a></li>
+                <li><a href="#contact" class="mobile-nav-link" id="mob-link-contact">ხსოვნის წიგნი</a></li>
+            </ul>
+            <div class="mobile-drawer-cta">
+                <a href="#heroes" class="btn btn-gold btn-full" id="mob-cta-btn">
+                    <span>გმირების გაცნობა</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ==============================================
+             HERO SECTION (მთავარი ბანერი)
+        =============================================== -->
+        <section class="section hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="cross-icon">✠</span>
+                        <span class="badge-text">დიდება სამშობლოსათვის თავდადებულ მამულიშვილებს</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        საქართველო — <span class="gold-gradient-text">გმირთა და დიდებული</span> ისტორიის მხარე
+                    </h1>
+
+                    <p class="hero-description">
+                        საუკუნეების განმავლობაში თავისუფლებისთვის, ეროვნული ღირსებისა და რწმენისთვის მებრძოლი ქართველი ერის უდრეკი სულისკვეთება და უკვდავი მემკვიდრეობა.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#heroes" class="btn btn-burgundy btn-lg" id="hero-cta-heroes">
+                            <span>გაეცანით გმირებს</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-svg">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#timeline" class="btn btn-outline-gold btn-lg" id="hero-cta-timeline">
+                            <span class="icon-circle">📜</span>
+                            <span>ისტორიული ქრონოლოგია</span>
+                        </a>
+                    </div>
+
+                    <!-- Historical Stat Badges -->
+                    <div class="hero-stats-row">
+                        <div class="stat-box">
+                            <span class="stat-number">3000+</span>
+                            <span class="stat-caption">წლოვანი სახელმწიფოებრიობა</span>
+                        </div>
+                        <div class="stat-sep"></div>
+                        <div class="stat-box">
+                            <span class="stat-number">1121</span>
+                            <span class="stat-caption">ძლევაჲ საკვირველი</span>
+                        </div>
+                        <div class="stat-sep"></div>
+                        <div class="stat-box">
+                            <span class="stat-number">უკვდავი</span>
+                            <span class="stat-caption">მამულისთვის თავდადება</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual: Georgian Emblem & Regal Shield -->
+                <div class="hero-visual-card-wrap">
+                    <div class="regal-shield-card">
+                        <div class="shield-gold-border"></div>
+                        <div class="shield-inner-content">
+                            <div class="shield-emblem-circle">
+                                <svg viewBox="0 0 100 100" class="national-cross-svg">
+                                    <!-- Central Bolnisi Cross -->
+                                    <path d="M45 20 H55 V45 H80 V55 H55 V80 H45 V55 H20 V45 H45 Z" fill="#d97706"/>
+                                    <!-- 4 Corner Crosses -->
+                                    <path d="M28 28 H34 V31 H31 V34 H28 Z" fill="#991b1b"/>
+                                    <path d="M66 28 H72 V31 H69 V34 H66 Z" fill="#991b1b"/>
+                                    <path d="M28 66 H34 V69 H31 V72 H28 Z" fill="#991b1b"/>
+                                    <path d="M66 66 H72 V69 H69 V72 H66 Z" fill="#991b1b"/>
+                                </svg>
+                            </div>
+                            <h3 class="shield-title">„მამული, ენა, სარწმუნოება“</h3>
+                            <p class="shield-quote">
+                                „ჩვენი თავისუფლება ჩვენს ერთობაში, ჩვენს წარსულსა და გმირთა ხსოვნაშია.“
+                            </p>
+                            <div class="shield-divider">
+                                <span>✦ ✦ ✦</span>
+                            </div>
+                            <div class="shield-footnote">
+                                <span class="footnote-tag">წმინდა გიორგის მფარველობით</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             HEROES SECTION (ქართველი გმირები)
+        =============================================== -->
+        <section class="section heroes-section" id="heroes">
+            <div class="container">
+                <div class="section-header-regal">
+                    <span class="section-tag-gold">სამშობლოს უკვდავი მცველები</span>
+                    <h2 class="section-title">ეროვნული გმირები და მხედართმთავრები</h2>
+                    <p class="section-subtitle">
+                        ისტორიული მოღვაწეები და მებრძოლები, რომელთა სიბრძნემ, თავდადებამ და სიმამაცემ შეინარჩუნა და გააძლიერა საქართველო.
+                    </p>
+                </div>
+
+                <!-- Heroes Grid (4 Cards as requested) -->
+                <div class="heroes-grid">
+
+                    <!-- Hero 1: დავით IV აღმაშენებელი -->
+                    <article class="hero-card" data-hero="david">
+                        <div class="card-ornament-header">
+                            <span class="hero-era-badge">XI – XII საუკუნე</span>
+                            <span class="hero-cross-mark">✠</span>
+                        </div>
+                        <div class="hero-avatar-box david-accent">
+                            <span class="avatar-monogram">დ</span>
+                            <div class="avatar-crown-icon">👑</div>
+                        </div>
+                        <h3 class="hero-name">დავით IV აღმაშენებელი</h3>
+                        <span class="hero-role-title">ქვეყნის გაერთიანება და დიდგორის ბრძოლა</span>
+                        <p class="hero-card-desc">
+                            საქართველოს უდიდესი მეფე და მხედართმთავარი. მან გააერთიანა ქართული სამეფო-სამთავროები, გაატარა სახელმწიფოებრივი რეფორმები და 1121 წლის დიდგორის ბრძოლაში („ძლევაჲ საკვირველი“) უდიდესი გამარჯვება მოიპოვა.
+                        </p>
+                        <div class="hero-card-footer">
+                            <button type="button" class="btn btn-details" data-modal="david" aria-label="დავით აღმაშენებლის შესახებ ვრცლად">
+                                <span>ვრცლად</span>
+                                <span class="btn-arrow">→</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Hero 2: თამარ მეფე -->
+                    <article class="hero-card" data-hero="tamar">
+                        <div class="card-ornament-header">
+                            <span class="hero-era-badge">XII – XIII საუკუნე</span>
+                            <span class="hero-cross-mark">✠</span>
+                        </div>
+                        <div class="hero-avatar-box tamar-accent">
+                            <span class="avatar-monogram">თ</span>
+                            <div class="avatar-crown-icon">👑</div>
+                        </div>
+                        <h3 class="hero-name">თამარ მეფე</h3>
+                        <span class="hero-role-title">საქართველოს ოქროს ხანა და კულტურული აღზევება</span>
+                        <p class="hero-card-desc">
+                            საქართველოს პირველი ქალი მონარქი, რომლის მმართველობის პერიოდი სამართლიანად იწოდება „ოქროს ხანად“. ქვეყანამ მიაღწია უმაღლეს პოლიტიკურ, სამხედრო და კულტურულ ძლიერებას. სწორედ ამ ეპოქაში შეიქმნა „ვეფხისტყაოსანი“.
+                        </p>
+                        <div class="hero-card-footer">
+                            <button type="button" class="btn btn-details" data-modal="tamar" aria-label="თამარ მეფის შესახებ ვრცლად">
+                                <span>ვრცლად</span>
+                                <span class="btn-arrow">→</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Hero 3: 300 არაგველი -->
+                    <article class="hero-card" data-hero="aragveli">
+                        <div class="card-ornament-header">
+                            <span class="hero-era-badge">1795 წელი</span>
+                            <span class="hero-cross-mark">✠</span>
+                        </div>
+                        <div class="hero-avatar-box aragveli-accent">
+                            <span class="avatar-monogram">300</span>
+                            <div class="avatar-crown-icon">⚔️</div>
+                        </div>
+                        <h3 class="hero-name">300 არაგველი</h3>
+                        <span class="hero-role-title">თავდადება და სამშობლოს სიყვარული კრწანისში</span>
+                        <p class="hero-card-desc">
+                            კრწანისის ბრძოლის უკვდავი გმირები, რომლებმაც ფიცი დადეს: „თუ ჩვენგან ვინმე ცოცხალი დაბრუნდეს, შეჩვენებული იყოს!“. მათ საკუთარი სიცოცხლე შესწირეს სამშობლოსა და მოხუცი მეფე ერეკლე II-ის გადარჩენას.
+                        </p>
+                        <div class="hero-card-footer">
+                            <button type="button" class="btn btn-details" data-modal="aragveli" aria-label="300 არაგველის შესახებ ვრცლად">
+                                <span>ვრცლად</span>
+                                <span class="btn-arrow">→</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Hero 4: გიორგი ანწუხელიძე -->
+                    <article class="hero-card" data-hero="antsukhelidze">
+                        <div class="card-ornament-header">
+                            <span class="hero-era-badge">2008 წელი</span>
+                            <span class="hero-cross-mark">✠</span>
+                        </div>
+                        <div class="hero-avatar-box antsukhelidze-accent">
+                            <span class="avatar-monogram">გ</span>
+                            <div class="avatar-crown-icon">🎖️</div>
+                        </div>
+                        <h3 class="hero-name">გიორგი ანწუხელიძე</h3>
+                        <span class="hero-role-title">თანამედროვე ეროვნული გმირი</span>
+                        <p class="hero-card-desc">
+                            2008 წლის აგვისტოს ომის ეროვნული გმირი. მტრის მიერ დატყვევებულმა ქართველმა სერჟანტმა გაუძლო სასტიკ წამებას, არ გატყდა, არ უღალატა სამხედრო ფიცს და არ დააბიჯა საქართველოს სახელმწიფო დროშას.
+                        </p>
+                        <div class="hero-card-footer">
+                            <button type="button" class="btn btn-details" data-modal="antsukhelidze" aria-label="გიორგი ანწუხელიძის შესახებ ვრცლად">
+                                <span>ვრცლად</span>
+                                <span class="btn-arrow">→</span>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             TIMELINE SECTION (ისტორიული ქრონოლოგია)
+        =============================================== -->
+        <section class="section timeline-section" id="timeline">
+            <div class="container">
+                <div class="section-header-regal">
+                    <span class="section-tag-gold">ეპოქალური ეტაპები</span>
+                    <h2 class="section-title">საქართველოს ისტორიული ქრონოლოგია</h2>
+                    <p class="section-subtitle">
+                        უმნიშვნელოვანესი თარიღები და გარდამტეხი მოვლენები, რომლებმაც შექმნეს ქართული სახელმწიფოებრიობა და თავისუფლების იდეალი.
+                    </p>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="timeline-wrapper">
+                    <div class="timeline-center-line" aria-hidden="true"></div>
+
+                    <!-- Event 1 -->
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-dot">
+                            <span>ძვ.წ.</span>
+                        </div>
+                        <div class="timeline-card">
+                            <span class="timeline-year-badge">ძვ.წ. IV – III სს.</span>
+                            <h4 class="timeline-event-title">ფარნავაზ I და ქართული დამწერლობა</h4>
+                            <p class="timeline-event-desc">
+                                იბერიის (ქართლის) პირველი მეფის მიერ ერთიანი სახელმწიფოს დაფუძნება, საერისთავოების შექმნა და ქართული ენისა და ანბანის სახელმწიფოებრივ რანგში აყვანა.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot">
+                            <span>326</span>
+                        </div>
+                        <div class="timeline-card">
+                            <span class="timeline-year-badge">326 წელი</span>
+                            <h4 class="timeline-event-title">ქრისტიანობის სახელმწიფო რელიგიად გამოცხადება</h4>
+                            <p class="timeline-event-desc">
+                                წმინდა ნინოს ქადაგებითა და მირიან მეფის გადაწყვეტილებით ქრისტიანობის მიღება, რამაც განსაზღვრა ქართველი ერის ევროპული და ქრისტიანული იდენტობა.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-dot gold-glow-dot">
+                            <span>1121</span>
+                        </div>
+                        <div class="timeline-card highlight-card">
+                            <span class="timeline-year-badge gold-badge">1121 წლის 12 აგვისტო</span>
+                            <h4 class="timeline-event-title">დიდგორის ბრძოლა — „ძლევაჲ საკვირველი“</h4>
+                            <p class="timeline-event-desc">
+                                დავით აღმაშენებლის გენიალური სამხედრო ტაქტიკით მრავალრიცხოვანი მტრის დამარცხება. თბილისის გათავისუფლება და ერთიანი, ძლიერი საქართველოს დედაქალაქად გამოცხადება.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event 4 -->
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot">
+                            <span>XII-XIII</span>
+                        </div>
+                        <div class="timeline-card">
+                            <span class="timeline-year-badge">XII – XIII საუკუნეები</span>
+                            <h4 class="timeline-event-title">საქართველოს „ოქროს ხანა“ — თამარ მეფე</h4>
+                            <p class="timeline-event-desc">
+                                ქვეყნის პოლიტიკური, ეკონომიკური და კულტურული აყვავება. შოთა რუსთაველის მიერ „ვეფხისტყაოსნის“ დაწერა და ვარძიის კლდეში ნაკვეთი ქალაქ-მონასტრის მშენებლობა.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event 5 -->
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-dot">
+                            <span>1795</span>
+                        </div>
+                        <div class="timeline-card">
+                            <span class="timeline-year-badge">1795 წლის 11 სექტემბერი</span>
+                            <h4 class="timeline-event-title">კრწანისის ბრძოლა და 300 არაგველის გმირობა</h4>
+                            <p class="timeline-event-desc">
+                                აღა-მაჰმად-ხანის შემოსევა თბილისზე. ერეკლე II-ისა და 300 არაგველის თავდადებული ბრძოლა, რომელმაც ქართველი მებრძოლის სიმამაცე ლეგენდად აქცია.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event 6 -->
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot">
+                            <span>1918</span>
+                        </div>
+                        <div class="timeline-card">
+                            <span class="timeline-year-badge">1918 წლის 26 მაისი</span>
+                            <h4 class="timeline-event-title">საქართველოს დამოუკიდებლობის გამოცხადება</h4>
+                            <p class="timeline-event-desc">
+                                საქართველოს პირველი დემოკრატიული რესპუბლიკის შექმნა, ევროპული ტიპის კონსტიტუციის მიღება და საუკუნოვანი დამოუკიდებლობის აღდგენა.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event 7 -->
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-dot red-glow-dot">
+                            <span>2008</span>
+                        </div>
+                        <div class="timeline-card highlight-card">
+                            <span class="timeline-year-badge red-badge">2008 წლის აგვისტო</span>
+                            <h4 class="timeline-event-title">აგვისტოს ომი — თავისუფლების უწყვეტი დაცვა</h4>
+                            <p class="timeline-event-desc">
+                                რუსული აგრესიის წინააღმდეგ თავდადებული წინააღმდეგობა. გიორგი ანწუხელიძის, შინდისის გმირებისა და ქართველი მეომრების უკვდავი თავგანწირვა.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             HERITAGE & QUOTES SECTION (მემკვიდრეობა)
+        =============================================== -->
+        <section class="section heritage-section" id="heritage">
+            <div class="container">
+                <div class="heritage-quote-box">
+                    <span class="quote-sign">“</span>
+                    <blockquote class="lead-quote-text">
+                        „რა გითხრათ? რით გაგახაროთ?... ჩვენი თავი ჩვენადვე უნდა გვეყუდნოდეს, ჩვენი მამული ჩვენვე უნდა ავაშენოთ.“
+                    </blockquote>
+                    <cite class="quote-author">— წმინდა ილია მართალი (ჭავჭავაძე)</cite>
+                </div>
+
+                <div class="heritage-features-grid">
+                    <div class="heritage-item">
+                        <div class="heritage-icon-circle">📜</div>
+                        <h4>ქართული დამწერლობა</h4>
+                        <p>იუნესკოს მიერ აღიარებული მსოფლიოს ერთ-ერთი უძველესი და უნიკალური ცოცხალი ანბანი (ასომთავრული, ნუსხური, მხედრული).</p>
+                    </div>
+
+                    <div class="heritage-item">
+                        <div class="heritage-icon-circle">🍷</div>
+                        <h4>8000 წლოვანი მეღვინეობა</h4>
+                        <p>საქართველო არის ღვინის უძველესი სამშობლო ქვევრის ტრადიციული ტექნოლოგიითა და უნიკალური ენდემური ვაზის ჯიშებით.</p>
+                    </div>
+
+                    <div class="heritage-item">
+                        <div class="heritage-icon-circle">🛡️</div>
+                        <h4>უდრეკი სულისკვეთება</h4>
+                        <p>საუკუნეების განმავლობაში ათასობით ბრძოლაგამოვლილი ერი, რომელმაც შეინარჩუნა თავისუფლება, ენა და იდენტობა.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             MEMORIAL CONTACT SECTION (ხსოვნის წიგნი)
+        =============================================== -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header-regal">
+                    <span class="section-tag-gold">ხსოვნა და პატივისცემა</span>
+                    <h2 class="section-title">ეროვნული ხსოვნის წიგნი</h2>
+                    <p class="section-subtitle">
+                        დაუტოვეთ მადლიერების სიტყვები სამშობლოსათვის დაცემულ გმირებს ან დაგვიკავშირდით ისტორიული მასალების გასაზიარებლად.
+                    </p>
+                </div>
+
+                <div class="contact-layout">
+                    <!-- Left: Patriotic Info -->
+                    <div class="contact-tribute-side">
+                        <div class="tribute-glass-card">
+                            <h3 class="tribute-title">„გმირები არ კვდებიან“</h3>
+                            <p class="tribute-desc">
+                                ერის სიძლიერე იზომება იმით, თუ როგორ აფასებს იგი საკუთარ გმირებს. თითოეული ქართველის მოვალეობაა, მომავალ თაობებს გადასცეს სიმართლე და სიამაყე ჩვენი წინაპრების შესახებ.
+                            </p>
+                            
+                            <div class="tribute-quote-banner">
+                                <span class="tribute-ornament">✠</span>
+                                <p>„სჯობს სიცოცხლესა ნაზრახსა სიკვდილი სახელოვანი!“</p>
+                                <small>— შოთა რუსთაველი</small>
+                            </div>
+
+                            <div class="tribute-contact-details">
+                                <div class="detail-item">
+                                    <span class="d-icon">🏛️</span>
+                                    <span>საქართველოს ეროვნული მემორიალური პორტალი</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="d-icon">📍</span>
+                                    <span>თბილისი, რუსთაველის გამზირი</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="d-icon">✉️</span>
+                                    <span>heritage@georgia.gov.ge</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Tribute Form -->
+                    <div class="contact-form-side">
+                        <div class="regal-form-card">
+                            <form id="tribute-form" class="regal-form" novalidate>
+                                <h3 class="form-heading">შეტყობინების დატოვება</h3>
+                                <p class="form-subheading">შეავსეთ ფორმა ხსოვნის წიგნში ჩანაწერის გასაკეთებლად:</p>
+
+                                <div class="form-group" id="group-name">
+                                    <label for="user-name">თქვენი სახელი და გვარი <span class="star">*</span></label>
+                                    <input type="text" id="user-name" name="name" class="form-input" placeholder="მაგ: ირაკლი ბერიძე" required>
+                                    <span class="field-error" id="error-name">გთხოვთ მიუთითოთ თქვენი სახელი</span>
+                                </div>
+
+                                <div class="form-group" id="group-email">
+                                    <label for="user-email">ელექტრონული ფოსტა <span class="star">*</span></label>
+                                    <input type="email" id="user-email" name="email" class="form-input" placeholder="tqveni-meili@example.ge" required>
+                                    <span class="field-error" id="error-email">გთხოვთ შეიყვანოთ სწორი ელ-ფოსტა</span>
+                                </div>
+
+                                <div class="form-group" id="group-hero-select">
+                                    <label for="hero-select">მიუძღვენით გმირს</label>
+                                    <select id="hero-select" name="hero" class="form-input custom-select">
+                                        <option value="all">ყველა ქართველ გმირს</option>
+                                        <option value="david">დავით აღმაშენებელს</option>
+                                        <option value="tamar">თამარ მეფეს</option>
+                                        <option value="aragveli">300 არაგველს</option>
+                                        <option value="antsukhelidze">გიორგი ანწუხელიძეს</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group" id="group-message">
+                                    <label for="user-message">მადლიერების შეტყობინება / ჩანაწერი <span class="star">*</span></label>
+                                    <textarea id="user-message" name="message" class="form-input form-textarea" rows="4" placeholder="თქვენი სიტყვები გმირების ხსოვნისადმი..." required></textarea>
+                                    <span class="field-error" id="error-message">შეტყობინება არ უნდა იყოს ცარიელი</span>
+                                </div>
+
+                                <button type="submit" class="btn btn-gold btn-full" id="tribute-submit-btn">
+                                    <span class="spinner" aria-hidden="true"></span>
+                                    <span class="btn-text">ჩანაწერის გაგზავნა</span>
+                                    <span class="btn-icon">🕊️</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==============================================
+         FOOTER
+    =============================================== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="brand-logo footer-logo">
+                    <span class="logo-shield-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="shield-svg">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M12 7v8M8 11h8" stroke-width="2.2" stroke-linecap="round"></path>
+                        </svg>
+                    </span>
+                    <span class="brand-name">საქართველო</span>
+                </div>
+                <p class="footer-desc">
+                    საგანმანათლებლო და ისტორიული პორტალი, რომელიც ეძღვნება ქართველ ეროვნულ გმირებსა და ჩვენი სამშობლოს დიდებულ წარსულს.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">ნავიგაცია</h4>
+                <ul class="footer-nav">
+                    <li><a href="#hero">მთავარი ბანერი</a></li>
+                    <li><a href="#heroes">ქართველი გმირები</a></li>
+                    <li><a href="#timeline">ისტორიული ქრონოლოგია</a></li>
+                    <li><a href="#heritage">კულტურული მემკვიდრეობა</a></li>
+                    <li><a href="#contact">ხსოვნის წიგნი</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">გმირები</h4>
+                <ul class="footer-nav">
+                    <li><a href="#heroes">დავით IV აღმაშენებელი</a></li>
+                    <li><a href="#heroes">თამარ მეფე</a></li>
+                    <li><a href="#heroes">300 არაგველი</a></li>
+                    <li><a href="#heroes">გიორგი ანწუხელიძე</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">ეროვნული დევიზი</h4>
+                <p class="footer-motto">„ძალა ერთობაშია“</p>
+                <div class="footer-crosses">✠ ✠ ✠ ✠ ✠</div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>© 2026 საქართველო და ქართველი გმირები. ყველა უფლება დაცულია.</p>
+                <p class="credit-text">შექმნილია პატივისცემითა და სიამაყით 🇬🇪</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==============================================
+         INTERACTIVE DETAILS MODAL (ვრცლად)
+    =============================================== -->
+    <div class="modal-overlay" id="hero-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-hero-title">
+        <div class="modal-box">
+            <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="დახურვა">&times;</button>
+            <div class="modal-body-content">
+                <div class="modal-header-banner">
+                    <span class="modal-avatar-badge" id="modal-avatar-icon">👑</span>
+                    <div>
+                        <span class="modal-era-tag" id="modal-hero-era">XI – XII საუკუნე</span>
+                        <h3 class="modal-title" id="modal-hero-title">დავით IV აღმაშენებელი</h3>
+                    </div>
+                </div>
+
+                <div class="modal-text-content">
+                    <h4 class="modal-subheading" id="modal-hero-subtitle">ქვეყნის გაერთიანება და „ძლევაჲ საკვირველი“</h4>
+                    <p class="modal-paragraph" id="modal-hero-desc">
+                        ისტორიული აღწერა...
+                    </p>
+
+                    <div class="modal-facts-box" id="modal-hero-facts">
+                        <!-- Injected by script.js -->
+                    </div>
+                </div>
+
+                <div class="modal-footer-actions">
+                    <button type="button" class="btn btn-gold" id="modal-action-close">დახურვა</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Back to Top Button -->
+    <button type="button" class="back-to-top-btn" id="back-to-top" aria-label="ზემოთ დაბრუნება">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <!-- JavaScript Script -->
+    <script src="script.js"></script>
+</body>
+</html>
